@@ -9,6 +9,16 @@ let todos = JSON.parse(localStorage.getItem('todos')) || [];
 
 window.addEventListener('DOMContentLoaded', showAllTodos);
 
+// visitor counter
+const visiter_count=document.getElementById('count')
+
+const api=fetch("https://api.countapi.xyz/hit/to-do-list.com/visits");
+api.then((req)=>{
+    return req.json();
+}).then((res)=>{
+    visiter_count.innerHTML=res.value;
+})
+
 //get random unique id
 function getRandomId() {
     return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);

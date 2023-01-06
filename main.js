@@ -3,8 +3,7 @@ const add_btn = document.querySelector('.add-task-button');
 const todos_list = document.querySelector('.todos-list');
 const alert_message = document.querySelector('.alert-message');
 const delete_all_btn = document.querySelector('.delete-all-btn');
-
-
+//local storage
 let todos = JSON.parse(localStorage.getItem('todos')) || [];
 
 window.addEventListener('DOMContentLoaded', showAllTodos);
@@ -86,10 +85,7 @@ function Check_Box(id){
     }
     todo.diseble='disabled'
     todo.check='checked'
-    // todo.task.style.textDecoration="line-through"
     document.getElementById(id).style.textDecoration="line-through"
-    // task_input.value.style=document.getElementById(id).style.textDecorationColor="red"
-   
     saveToLocalStorage();
 }
 

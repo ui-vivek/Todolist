@@ -56,8 +56,6 @@ add_btn.addEventListener('click', () => {
     }
 });
 delete_all_btn.addEventListener('click', clearAllTodos);
-// let check='unchecked';
-// let diseble='undisabled';
 //show all todos
 function showAllTodos() {
     todos_list.innerHTML = '';
